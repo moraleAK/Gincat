@@ -3,12 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.0</version>
+        <groupId>net.gincat</groupId>
+        <artifactId>kitty</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>net.gincat</groupId>
+
+
     <artifactId>spring-data-jpax</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-data-jpax</name>
@@ -34,6 +35,18 @@
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson</groupId>
+            <artifactId>jackson-bom</artifactId>
+            <version>2.11.3</version>
+            <type>pom</type>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.fasterxml.jackson</groupId>-->
+            <!--<artifactId>jackson-bom</artifactId>-->
+            <!--<version>2.10.3</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework.data</groupId>
