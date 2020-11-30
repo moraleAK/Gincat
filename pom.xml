@@ -18,6 +18,7 @@
 
     <modules>
         <module>spring-data-jpax</module>
+        <module>spring-data-jpax-demo</module>
     </modules>
 
 	<properties>
