@@ -2,7 +2,9 @@ package net.gincat.demo.jpx.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 /**
  * @author Gin
@@ -21,6 +23,13 @@ public class School extends BaseEntity {
     private String description;
 
     private long buildTime;
+
+    @OneToMany(mappedBy = "school")
+    private List<Student> students;
+
+    @OneToMany(mappedBy = "school")
+    private List<Teacher> teachers;
+
 
     public String getName() {
         return name;
@@ -60,5 +69,21 @@ public class School extends BaseEntity {
 
     public void setBuildTime(long buildTime) {
         this.buildTime = buildTime;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public List<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(List<Teacher> teachers) {
+        this.teachers = teachers;
     }
 }

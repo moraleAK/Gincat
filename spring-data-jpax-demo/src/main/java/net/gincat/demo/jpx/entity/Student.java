@@ -28,6 +28,9 @@ public class Student extends BaseEntity {
     @ManyToOne
     private School school;
 
+    @ManyToOne
+    private Clazz clazz;
+
     public long getBirthday() {
         return birthday;
     }
@@ -74,5 +77,21 @@ public class Student extends BaseEntity {
 
     public void setIdNo(String idNo) {
         this.idNo = idNo;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
+
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
     }
 }
